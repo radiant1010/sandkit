@@ -11,7 +11,7 @@
 	            IDX,
 	            TITLE,
 	            HIT_CNT,
-	            CREA_DTM
+	            TO_CHAR(CREA_DTM, 'YYYY.MM.DD') AS CREA_DTM
 	        FROM
 	            TB_BOARD
 	        WHERE
@@ -20,8 +20,6 @@
 	    <include refid="common.pagingPost"/>
 	</select>
 
-
-	
 	<insert id="insertBoard" parameterType="hashmap" useGeneratedKeys="true" keyProperty="IDX">
 		<selectKey keyProperty="IDX" resultType="string" order="BEFORE">
 			SELECT SEQ_TB_BOARD_IDX.NEXTVAL FROM DUAL
