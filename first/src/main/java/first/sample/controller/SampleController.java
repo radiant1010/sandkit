@@ -100,4 +100,20 @@ public class SampleController {
 		
 		return mv;
 	}
+	
+	@RequestMapping(value="/sample/ajaxJson.do")
+	public ModelAndView ajaxJson(CommandMap commandMap) throws Exception{
+		ModelAndView mv = new ModelAndView("/sample/ajaxJson");
+
+		return mv;
+	}
+	
+	@RequestMapping(value="/sample/ajaxData.do")
+	public ModelAndView ajaxData(CommandMap commandMap) throws Exception{
+		ModelAndView mv = new ModelAndView("/sample/ajaxData");
+
+		return mv;
+	}
+	
+	
 }
